@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>{{ 'Editar Tarefa' if task else 'Nova Tarefa' }}</h2>
+
+<form method="POST">
+
+    <div class="mb-3">
+        <label>Título</label>
+
+        <input
+            class="form-control"
+            name="title"
+            value="{{ task.title if task else '' }}"
+            required>
+    </div>
+
+    <div class="mb-3">
+        <label>Descrição</label>
+
+        <textarea
+            class="form-control"
+            name="description">{{ task.description if task else '' }}</textarea>
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Prioridade</label>
+
+        <select
+            class="form-select"
+            name="priority">
+
+            <option value="Baixa"
+                {% if task and task.priority=='Baixa' %}selected{% endif %}>
+                Baixa
+            </option>
+
+            <option value="Média"
+                {% if not task or task.priority=='Média' %}selected{% endif %}>
+                Média
+            </option>
+
+            <option value="Alta"
+                {% if task and task.priority=='Alta' %}selected{% endif %}>
+                Alta
+            </option>
+
+        </select>
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Status</label>
+
+        <select
+            class="form-select"
+            name="status">
+
+            <option value="Pendente"
+                {% if not task or task.status=='Pendente' %}selected{% endif %}>
+                Pendente
+            </option>
+
+            <option value="Em andamento"
+                {% if task and task.status=='Em andamento' %}selected{% endif %}>
+                Em andamento
+            </option>
+
+            <option value="Concluído"
+                {% if task and task.status=='Concluído' %}selected{% endif %}>
+                Concluído
+            </option>
+
+        </select>
+
+    </div>
+
+    <button class="btn btn-primary">
+
+        Salvar
+
+    </button>
+
+    <a
+        href="/dashboard"
+        class="btn btn-secondary">
+
+        Cancelar
+
+    </a>
+
+</form>
+
+{% endblock %}
