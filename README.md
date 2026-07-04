@@ -207,4 +207,3 @@ Projeto desenvolvido para fins acadêmicos na disciplina de Engenharia de Softwa
 
 Este projeto está licenciado sob a licença **MIT**.
 
-Atualização: melhorias na documentação para entrega do projeto acadêmico.

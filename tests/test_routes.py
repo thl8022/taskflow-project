@@ -22,4 +22,3 @@ def test_dashboard_page(client):
 
     assert response.status_code == 200
 
-# ajuste para melhoria dos testes automatizados
