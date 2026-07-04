@@ -1,5 +1,7 @@
 # 📋 TaskFlow
 
+Atualização de documentação para fins de entrega acadêmica.
+
 > 🚧 **Status do Projeto:** Em desenvolvimento
 
 > **Sistema Web de Gerenciamento Ágil de Tarefas**
