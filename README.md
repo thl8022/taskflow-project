@@ -1,6 +1,5 @@
 # 📋 TaskFlow
 
-Atualização de documentação para fins de entrega acadêmica.
 
 > 🚧 **Status do Projeto:** Em desenvolvimento
 
@@ -207,3 +206,5 @@ Projeto desenvolvido para fins acadêmicos na disciplina de Engenharia de Softwa
 # 📄 Licença
 
 Este projeto está licenciado sob a licença **MIT**.
+
+Atualização: melhorias na documentação para entrega do projeto acadêmico.
