@@ -17,6 +17,25 @@ def get_all_tasks():
     return tasks
 
 
+def get_tasks_by_priority(priority):
+
+    conn = get_connection()
+
+    tasks = conn.execute(
+        """
+        SELECT *
+        FROM tasks
+        WHERE priority = ?
+        ORDER BY id DESC
+        """,
+        (priority,)
+    ).fetchall()
+
+    conn.close()
+
+    return tasks
+
+
 def get_task_by_id(task_id):
 
     conn = get_connection()

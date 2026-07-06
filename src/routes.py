@@ -2,6 +2,7 @@ from flask import render_template, request, redirect, url_for
 
 from src.services import (
     get_all_tasks,
+    get_tasks_by_priority,
     get_task_by_id,
     create_task,
     update_task,
@@ -19,13 +20,20 @@ def register_routes(app):
     @app.route("/dashboard")
     def dashboard():
 
-        tasks = get_all_tasks()
+        priority = request.args.get("priority")
+
+        if priority:
+            tasks = get_tasks_by_priority(priority)
+        else:
+            tasks = get_all_tasks()
+
         stats = get_dashboard_stats()
 
         return render_template(
             "dashboard.html",
             tasks=tasks,
-            stats=stats
+            stats=stats,
+            selected_priority=priority
         )
 
     @app.route("/new", methods=["GET", "POST"])

@@ -54,6 +54,44 @@
 
 </div>
 
+<!-- Filtro por prioridade -->
+
+<form method="GET" action="/dashboard" class="mb-3">
+
+    <div class="row">
+
+        <div class="col-md-4">
+
+            <select
+                name="priority"
+                class="form-select"
+                onchange="this.form.submit()">
+
+                <option value="">Todas as prioridades</option>
+
+                <option value="Alta"
+                    {% if selected_priority == 'Alta' %}selected{% endif %}>
+                    Alta
+                </option>
+
+                <option value="Média"
+                    {% if selected_priority == 'Média' %}selected{% endif %}>
+                    Média
+                </option>
+
+                <option value="Baixa"
+                    {% if selected_priority == 'Baixa' %}selected{% endif %}>
+                    Baixa
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+</form>
+
 <div class="card shadow-sm">
 
     <div class="card-body">
@@ -85,15 +123,51 @@
                 <td>{{ task.description }}</td>
 
                 <td>
-                    <span class="badge bg-warning text-dark">
-                        {{ task.priority }}
-                    </span>
+
+                    {% if task.priority == "Alta" %}
+
+                        <span class="badge bg-danger">
+                            {{ task.priority }}
+                        </span>
+
+                    {% elif task.priority == "Média" %}
+
+                        <span class="badge bg-warning text-dark">
+                            {{ task.priority }}
+                        </span>
+
+                    {% else %}
+
+                        <span class="badge bg-success">
+                            {{ task.priority }}
+                        </span>
+
+                    {% endif %}
+
                 </td>
 
                 <td>
-                    <span class="badge bg-primary">
-                        {{ task.status }}
-                    </span>
+
+                    {% if task.status == "Concluído" %}
+
+                        <span class="badge bg-success">
+                            {{ task.status }}
+                        </span>
+
+                    {% elif task.status == "Em andamento" %}
+
+                        <span class="badge bg-warning text-dark">
+                            {{ task.status }}
+                        </span>
+
+                    {% else %}
+
+                        <span class="badge bg-primary">
+                            {{ task.status }}
+                        </span>
+
+                    {% endif %}
+
                 </td>
 
                 <td>
@@ -129,7 +203,7 @@
 
         <div class="alert alert-info">
 
-            Nenhuma tarefa cadastrada.
+            Nenhuma tarefa encontrada para esta prioridade.
 
         </div>
 
