@@ -174,7 +174,7 @@ As principais etapas do projeto são:
 
 # 📚 Diagramas
 
-Os diagramas UML serão disponibilizados em:
+Os diagramas UML enocntram-se em:
 
 ```
 docs/uml/
