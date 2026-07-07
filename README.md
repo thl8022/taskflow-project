@@ -1,6 +1,6 @@
 # 📋 TaskFlow
 
-> ✅ **Status do Projeto:** Concluído (Versão Acadêmica)
+> ✅ **Status do Projeto:** Concluído
 
 > **Sistema Web de Gerenciamento Ágil de Tarefas**
 
