@@ -141,6 +141,3 @@ def get_dashboard_stats():
         "progress": progress,
         "completed": completed
     }
-
-
-

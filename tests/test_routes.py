@@ -23,10 +23,12 @@ def test_dashboard_page(client):
 
     assert response.status_code == 200
 
+
 def test_new_task_page(client):
     response = client.get("/new")
 
     assert response.status_code == 200
+
 
 def test_create_task(client):
 
@@ -42,6 +44,7 @@ def test_create_task(client):
     )
 
     assert response.status_code == 200
+
 
 def test_delete_task(client):
 
