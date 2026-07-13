@@ -61,6 +61,7 @@ O sistema possui as seguintes funcionalidades:
 | CSS3 | Estilização |
 | Bootstrap 5 | Interface responsiva |
 | Pytest | Testes automatizados |
+| Flake8 | Validação da qualidade e estilo do código |
 | Git | Controle de versão |
 | GitHub | Repositório do projeto |
 | GitHub Actions | Integração Contínua (CI) |
@@ -216,7 +217,7 @@ Os testes verificam:
 - Dashboard;
 - Página de cadastro de tarefas;
 - Cadastro de tarefas;
-- Exclusão de tarefas.
+- Edição de tarefas.
 
 Para executar todos os testes:
 
@@ -230,15 +231,15 @@ Todos os testes também são executados automaticamente pelo GitHub Actions semp
 
 # 🔄 Integração Contínua
 
-O projeto utiliza **GitHub Actions** para automatizar a execução dos testes.
+O projeto utiliza **GitHub Actions** para automatizar a validação da aplicação.
 
 A cada alteração enviada para o repositório, o workflow executa automaticamente:
 
 - instalação das dependências;
-- execução dos testes automatizados;
-- validação da aplicação.
+- validação da qualidade do código com Flake8;
+- execução dos testes automatizados com Pytest.
 
-Esse processo garante maior confiabilidade e estabilidade durante o desenvolvimento.
+Esse processo garante maior confiabilidade, padronização e estabilidade durante o desenvolvimento da aplicação.
 
 ---
 
@@ -292,7 +293,7 @@ Durante o desenvolvimento do projeto, o cliente identificou a necessidade de fac
 
 Como resposta a essa solicitação, foi implementado um **filtro de tarefas por prioridade**, permitindo ao usuário visualizar apenas as tarefas pertencentes à prioridade selecionada.
 
-Essa funcionalidade foi registrada no Kanban do projeto, implementada na aplicação, documentada no histórico de commits e validada por meio dos testes automatizados.
+Essa funcionalidade foi registrada no Kanban do projeto, implementada na aplicação e documentada no histórico de commits, representando a mudança de escopo proposta durante o desenvolvimento.
 
 ---
 
