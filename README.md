@@ -21,6 +21,7 @@ Durante o desenvolvimento foram aplicados diversos conceitos estudados na discip
 - Controle de versão utilizando Git;
 - Hospedagem do projeto no GitHub;
 - Testes automatizados utilizando Pytest;
+- Validação da qualidade do código utilizando Flake8;
 - Integração Contínua utilizando GitHub Actions;
 - Modelagem UML;
 - Documentação técnica.
@@ -266,7 +267,7 @@ Cada funcionalidade do sistema foi registrada, acompanhada e atualizada conforme
 - [x] Dashboard
 - [x] Interface Web
 - [x] Testes Automatizados
-- [x] GitHub Actions
+- [x] Integração Contínua (GitHub Actions + Flake8)
 - [x] Diagramas UML
 - [x] Documentação Técnica
 
